@@ -32,7 +32,12 @@ const Navbar = () => {
       if (decodedToken.exp * 1000 < new Date().getTime()) logout();
     }
 
-    setUser(JSON.parse(localStorage.getItem('profile')));
+    const localProfile = localStorage.getItem('profile');
+    if (localProfile) {
+      setUser(JSON.parse(localProfile));
+    } else {
+      setUser(null);
+    }
   }, [location]);
 
   return (
