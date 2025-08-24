@@ -61,4 +61,8 @@ const Navbar = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Navbar;
+=======
+export default Navbar;
+>>>>>>> 75b374b (Fix logout redirect in Navbar)
